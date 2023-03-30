@@ -1,4 +1,4 @@
-# Emilia
+# Emilia v1.1 GUI
 A simple IP host scanner with a convenient data sorting system.\
 The utility can be used to search for specific types of network devices.
 
