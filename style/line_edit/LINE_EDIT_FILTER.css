@@ -1,0 +1,6 @@
+QLineEdit {
+    background: rgba(30, 30, 30, 200);
+    color: white;
+    border-radius:15px;
+    font-size: 13px;
+}
