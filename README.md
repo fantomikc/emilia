@@ -1,4 +1,4 @@
-# emilia
+# Emilia
 A simple IP host scanner with a convenient data sorting system.\
 The utility can be used to search for specific types of network devices.
 
@@ -14,3 +14,5 @@ pip install -r requirements.txt
 
 python3 main.py
 ```
+
+![alt text](https://github.com/fantomikc/sys/blob/main/emilia/preview.png)
