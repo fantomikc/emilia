@@ -5,6 +5,7 @@ The utility can be used to search for specific types of network devices.
 ### The utility has been tested on the system:
 * **python 3.9.5**
 * **OS Windows 10/11**
+* GUI **PyQt6** 
 
 ## Instaling
 ```python
@@ -14,5 +15,5 @@ pip install -r requirements.txt
 
 python3 main.py
 ```
-
+## Preview
 ![alt text](https://github.com/fantomikc/sys/blob/main/emilia/preview.png)
