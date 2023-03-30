@@ -9,7 +9,7 @@ import contextlib
 urllib3.disable_warnings(InsecureRequestWarning)
 
 
-class EScan(QtCore.QThread):
+class startScan(QtCore.QThread):
     find = QtCore.pyqtSignal(list)
 
     def __init__(self, ip, interesting_word, parent=None):
@@ -47,7 +47,7 @@ class EScan(QtCore.QThread):
             soup_text = BeautifulSoup(response.text, "html.parser")
             title = soup_text.find("title").string
 
-            INTERESTING_WORD = [item for item in self.interesting_word if response.text.lower().__contains__(item)]
-            INTERESTING_WORD = ':'.join(INTERESTING_WORD)
+            interesting_word = [item for item in self.interesting_word if response.text.lower().__contains__(item)]
+            interesting_word = ':'.join(interesting_word)
 
-            self.find.emit([input_ip, domain, title, status_code, INTERESTING_WORD])
+            self.find.emit([input_ip, domain, title, status_code, interesting_word])
