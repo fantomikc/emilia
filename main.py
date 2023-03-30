@@ -6,7 +6,7 @@ from custom_class.CErrorDialog import CErrorDialog
 from ui import MainWindow
 from PyQt6 import QtWidgets, QtGui
 from PyQt6.QtWidgets import QMainWindow, QFileDialog
-from utils.startScan import EScan
+from utils.startScan import startScan
 from utils.sqlSave import sqlSave
 from utils.timerThread import timerThread
 from PyQt6.QtCore import Qt
@@ -33,7 +33,7 @@ class Emilia(QMainWindow):
                 self.ui.BUTTON_SCAN.click()
                 CErrorDialog("Check the correctness of the IP field data")
             else:
-                self.thread_scan = EScan(self.ui.LINE_IP.text(), self.ui.LINE_INTER.text().split(", "))
+                self.thread_scan = startScan(self.ui.LINE_IP.text(), self.ui.LINE_INTER.text().split(", "))
                 self.thread_scan.find.connect(self.addItem)
                 self.thread_scan.start()
                 self.thread_time = timerThread()
