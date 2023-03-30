@@ -6,7 +6,7 @@ def sqlSave(path, TABLE):
     try:
         connection = sqlite3.connect(path)
         cursor = connection.cursor()
-        cursor.execute("CREATE TABLE HOST(IP, DOMAIN, NAME, INTER, CODE)")
+        cursor.execute("CREATE TABLE HOST(IP, DOMAIN, NAME, CODE, INTER)")
         table_model = TABLE.model()
         for x in range(table_model.rowCount()):
             data_row = []
